@@ -1,0 +1,56 @@
+"
+" .vimrc
+"
+" Darren Kessner
+"
+
+echom "(>^.^<)"
+
+set nocompatible
+syntax enable
+filetype plugin on
+filetype indent on
+
+set is
+set vb
+set showcmd
+set nowrap
+
+set autoindent
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set autowrite
+
+set lines=45
+set columns=80
+
+set ignorecase
+set smartcase
+
+colorscheme koehler
+hi Visual term=NONE cterm=NONE gui=NONE guibg='Purple'
+"set guifont=Menlo-Regular:h16
+set guifont=Monospace\ 13
+"
+" hack for Ubuntu gvim to use 'gx' to open URLs
+let g:netrw_browsex_viewer="setsid xdg-open"
+
+"
+" key mappings
+"
+" nnoremap: 'n' normal, 'nore' non-recursive, 'map'
+"
+
+" insert date
+nnoremap <leader>id :.-1r!dkdate<cr>
+nnoremap <leader>it :.-1r!dkdatetime<cr>
+nnoremap <leader>ih :.-1r!dkhello %<cr>
+
+
+" open file/link 
+" (assumes 'open' works, possibly via symlink to xdg-open or exo-open)
+nnoremap <leader>o :!open <cWORD> & <cr> <esc>
+
+inoremap jk <esc>
+

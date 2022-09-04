@@ -1,0 +1,26 @@
+#!/bin/bash
+
+
+filename=Hello.java
+
+
+if [ $# -eq 1 ]
+then
+    filename=$1
+fi
+
+
+echo '//'
+echo "// $filename"
+echo '//'
+echo 
+echo 
+echo "public class $(basename $filename .java)"
+echo '{'
+echo '    public static void main(String[] args)'
+echo '    {'
+echo '        System.out.println("Hello, world!");'
+echo '    }'
+echo '}'
+echo
+

@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# dkhello_cpp
+#
+
+filename=Hello.java
+
+if [ $# -eq 1 ]
+then
+    filename=$1
+fi
+
+classname=$(basename $filename .hpp)
+
+echo '//'
+echo "// $filename"
+echo '//'
+echo 
+echo '#include "$classname.hpp"'
+echo 

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+filename=hello.py
+
+
+if [ $# -eq 1 ]
+then
+    filename=$1
+fi
+
+
+echo '#!/usr/bin/env python'
+echo '#'
+echo "# $filename"
+echo '#'
+echo 

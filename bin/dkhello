@@ -1,0 +1,32 @@
+#/bin/bash
+
+filename=Hello.java
+
+if [ $# -eq 1 ]
+then
+    filename=$1
+fi
+
+extension=${filename##*.}
+
+if [ $extension = "pde" ]
+then
+    dkhello_pde $filename
+elif [ $extension = "java" ]
+then
+    dkhello_java $filename
+elif [ $extension = "py" ]
+then
+    dkhello_py $filename
+elif [ $extension = "hpp" ]
+then
+    dkhello_hpp $filename
+elif [ $extension = "cpp" ]
+then
+    dkhello_cpp $filename
+else
+    echo "Unknown extension: $extension"
+    exit 1
+fi
+
+
