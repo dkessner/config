@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# dkextractora
+#
+# extracts .png from .ora
+#
+
+
+if [ $# -ne 1 ]
+then
+    echo Usage: dkextractora filename.ora
+    exit 1
+fi
+
+filename=$1
+
+if [ ${filename: -4} != ".ora" ]
+then
+    echo $filename is not .ora
+    exit 1
+fi
+
+unzip $filename mergedimage.png
+mv mergedimage.png ${filename/.ora/.png}
+

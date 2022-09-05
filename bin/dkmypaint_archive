@@ -1,0 +1,29 @@
+#!/bin/bash
+# 
+# dkmypaint_archive
+#
+
+for f in $(ls scrap*.ora)
+do
+    dkextractora $f
+done
+
+i=0
+for f in scrap*.png
+do
+    echo $i.png
+    mv $f $i.png
+    i=$(( i + 1 ))
+done
+
+for f in *.png
+do
+    convert -resize 50% $f $f
+done
+
+convert *.png notes.pdf
+
+mkdir notes
+
+cp *.png notes.pdf notes
+
