@@ -21,9 +21,14 @@ do
     convert -resize 50% $f $f
 done
 
-convert *.png notes.pdf
+for f in *.png
+do
+    convert $f ${f/png/jpg}
+done
+
+convert *.jpg notes.pdf
 
 mkdir notes
 
-cp *.png notes.pdf notes
+cp *.jpg notes.pdf notes
 
