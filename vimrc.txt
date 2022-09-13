@@ -31,7 +31,7 @@ set smartcase
 colorscheme koehler
 hi Visual term=NONE cterm=NONE gui=NONE guibg='Purple'
 "set guifont=Menlo-Regular:h16
-set guifont=Monospace\ 13
+set guifont=Monospace\ 15
 "
 " hack for Ubuntu gvim to use 'gx' to open URLs
 let g:netrw_browsex_viewer="setsid xdg-open"
