@@ -54,3 +54,10 @@ nnoremap <leader>o :!open <cWORD> & <cr> <esc>
 
 inoremap jk <esc>
 
+
+try
+    source ~/.vimrc_local
+catch
+    " no .vimrc_local
+endtry
+
