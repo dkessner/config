@@ -20,6 +20,10 @@ ln -s ~/path/to/vimrc.txt ~/.vimrc
 
 ## git
 
+Call `gvim` without forking, so `git commit` waits
+for editor to finish:
+`gvim -f`
+
 ```
 git config --global core.editor "gvim -f"
 ```
