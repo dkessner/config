@@ -18,3 +18,15 @@ ln -s ~/path/to/vimrc.txt ~/.vimrc
 
 
 
+## git
+
+```
+git config --global core.editor "gvim -f"
+```
+
+or edit  `~/.gitconfig`
+```
+[core]
+        editor = gvim -f
+```
+
