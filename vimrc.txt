@@ -28,6 +28,8 @@ set columns=80
 set ignorecase
 set smartcase
 
+setlocal cm=blowfish2
+
 colorscheme koehler
 hi Visual term=NONE cterm=NONE gui=NONE guibg='Purple'
 "set guifont=Menlo-Regular:h16
