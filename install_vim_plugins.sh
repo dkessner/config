@@ -30,3 +30,7 @@ git clone https://github.com/sophacles/vim-processing.git 2>> ../../../install.l
 #git clone https://github.com/preservim/vim-markdown.git 2>> ../../../install.log
 #
 
+
+echo "Installing vim-nextflow"
+git clone https://github.com/LukeGoodsell/nextflow-vim 2>> ../../../install.log
+
