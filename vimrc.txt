@@ -4,7 +4,7 @@
 " Darren Kessner
 "
 
-echom "(>^.^<)"
+" echom "(>^.^<)"
 
 set nocompatible
 syntax enable
@@ -49,6 +49,9 @@ nnoremap <leader>id :.-1r!dkdate<cr>
 nnoremap <leader>it :.-1r!dkdatetime<cr>
 nnoremap <leader>ih :.-1r!dkhello %<cr>
 
+" force redraw
+nnoremap <leader><leader> :!true<cr><cr>
+
 
 " open file/link 
 " (assumes 'open' works, possibly via symlink to xdg-open or exo-open)
@@ -58,7 +61,7 @@ inoremap jk <esc>
 
 
 try
-    source ~/.vimrc_local
+    ~/.vimrc_local
 catch
     " no .vimrc_local
 endtry
